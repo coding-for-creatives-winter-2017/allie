@@ -1,50 +1,52 @@
-var ex = 1;
-var ey = 1;
-var ew = 40;
-var eh = 40;
-var rx = 1199;
-var ry = 699;
-var rw = 40;
-var rh = 40;
+var exone = 1;
+var eyone = 1;
+var ewone = 70;
+var ehone = 70;
+var extwo = 1199;
+var eytwo = 699;
+var ewtwo = 100;
+var ehtwo = 100;
 var windowwidth = 1450;
 var windowheight = 700;
-var exspeed = 10;
-var eyspeed = 7;
-var rxspeed = 9;
-var ryspeed = 6;
+var exonespeed = 3;
+var eyonespeed = 1;
+var extwospeed = 3;
+var eytwospeed = 1;
 
 function setup() {
   createCanvas(windowwidth, windowheight);
 }
 
+
+
 function draw() {
-  background (141,250,178);
+  background (235,181,187);
   	noStroke ();
-	fill (106,187,133)
-  	ellipse (ex, ey, ew, eh);
-  	fill (35,62,44)
-  	rect (rx,ry,rw,rh);
+	fill (224,209,210)
+  	ellipse (exone, eyone, ewone, ehone);
+  	fill (213,79,140)
+  	ellipse (extwo,eytwo,ewtwo,ehtwo);
 
- 	 ex = ex + exspeed;
-  	 rx = rx - rxspeed;
+ 	 exone = exone + exonespeed;
+  	 extwo = extwo - extwospeed;
 
-  	 if (ex > windowwidth | ex < 1)  {
-     	exspeed = -exspeed;
+  	 if (exone > windowwidth | exone < 1)  {
+     	exonespeed = -exonespeed;
   	}
 
-  	 if (rx > windowwidth | rx < 1)  {
-     	rxspeed = -rxspeed;
+  	 if (extwo > windowwidth | extwo < 1)  {
+     	extwospeed = -extwospeed;
   	}
 
-  	ey = ey + eyspeed;
-	ry = ry - ryspeed;
+  	eyone = eyone + eyonespeed;
+	eytwo = eytwo - eytwospeed;
 
-  	if (ey > windowheight | ey < 1) {
-	 	  eyspeed = -eyspeed;
+  	if (eyone > windowheight | eyone < 1) {
+	 	  eyonespeed = -eyonespeed;
   	}
 
-	if (ry > windowheight | ry < 1) {
-		 	  ryspeed = -ryspeed;
+	if (eytwo > windowheight | eytwo < 1) {
+		 	  eytwospeed = -eytwospeed;
 	}
 
 }
